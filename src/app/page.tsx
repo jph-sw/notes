@@ -4,7 +4,6 @@ import { redirect } from "next/navigation";
 
 import Form from "@/components/form";
 import { cache } from "react";
-import HeroSection from "@/components/landing/hero-section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
