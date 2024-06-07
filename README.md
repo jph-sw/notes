@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lucia-Auth with NextJS
 
-## Getting Started
+A test project to try out [Lucia-Auth](https://lucia-auth.com/) with [NextJS](https://nextjs.org/) App router using a **[PostgreSQL](https://www.postgresql.org/) docker container** as database.
 
-First, run the development server:
+### Usage:
 
+First rename *.env.example* to *.env*  
+
+Then start the postgres docker container by running this command: 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+docker compose up -d  # this will start it in detached mode
+pnpm install # npm install 
+pnpm prisma db push # npx prisma db push
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Now you can create users at http://localhost:3000/signup and login at http://localhost:3000/login after that. Remember this is just the bare minimum to get starting. You **MUST** secure your database with better credentials. 
